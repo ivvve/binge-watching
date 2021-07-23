@@ -1,18 +1,14 @@
-# Getting Started
+= Binge Watching
+:toc: left
+:toclevels: 3
 
-### Reference Documentation
+:imagesdir: ./docs/images/
 
-For further reference, please consider the following sections:
+== 개요
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.5.3/gradle-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.5.3/gradle-plugin/reference/html/#build-image)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.5.3/reference/htmlsingle/#using-boot-devtools)
-* [Spring Configuration Processor](https://docs.spring.io/spring-boot/docs/2.5.3/reference/htmlsingle/#configuration-metadata-annotation-processor)
+== 기획
 
-### Additional Links
+== Dev
 
-These additional references should also help you:
-
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
-
+=== Git Convention
+include::./docs/git-convention.adoc[]
