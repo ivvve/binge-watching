@@ -1,0 +1,50 @@
+==== Branch
+
+특정 Issue에 대해 처리하는 단위가 됩니다.
+여러 작업을 하나의 Branch로 처리하지 않도록 합니다.
+
+Branch 관리는 Git Flow 기반의 Branch를 사용합니다.
+
+image::gitflow.png[]
+
+* master: 릴리즈 된 버전 (Tag로 관리합니다)
+* develop: 현재 개발 중인 최신 빌드 버전의 Branch
+* feature: 특정 기능 개발 Branch
+* release: 릴리즈 전에 점검을 하기 위한 빌드 버전의 Branch
+** 릴리즈가 되면 삭제하도록 합니다
+* hotfix: 릴리즈 된 버전에서 긴급하게 버그를 고치기 위한 Branch
+
+===== Branch Naming Rules
+====== **feature**, **hotfix**
+[source,text]
+----
+<type>/<issue number>
+----
+
+* type: 어떤 작업에 대한 Branch 인지를 나타냅니다 (feature, hotfix)
+* issue number: 해당 작업과 관련된 Issue Number
+
+
+==== Commit Rules
+Commit은 논리적인 작업의 단위가 됩니다.
+여러 작업을 하나의 Commit으로 하지 않도록 합니다.
+
+===== Commit Message Template
+
+[source,text]
+----
+[#<issue number>] <type>: <short summary>
+
+<(optional) detail message>
+----
+
+* issue number: 해당 작업과 관련된 Issue Number
+* type: 무엇을 위한 Commit 인지를 나타냅니다
+** feature: 새로운 기능 관련 작업
+** refactor: 기존 기능이 변경되지 않는 리팩토링 관련 작업
+** test: 테스트 코드 관련 작업
+** fix: 버그 픽스 관련 작업
+** build: 애플리케이션 build 관련 작업 (e.g. external dependency, gradle script)
+** ops: infrastructure operation 관련 작업 (e.g. CI/CD)
+** docs: 문서 관련 작업
+* (optional) detail message: Commit 관련 더 자세한 사항을 적습니다 (자유 형식)
