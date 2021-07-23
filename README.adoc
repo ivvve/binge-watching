@@ -12,3 +12,6 @@
 
 === Git Convention
 include::./docs/git-convention.adoc[]
+
+=== Code Style
+include::./docs/code-style.adoc[]
