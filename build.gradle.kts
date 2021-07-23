@@ -5,6 +5,7 @@ plugins {
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version "1.5.21"
     kotlin("plugin.spring") version "1.5.21"
+    id("io.gitlab.arturbosch.detekt").version("1.18.0-RC2")
 }
 
 java.sourceCompatibility = JavaVersion.VERSION_11
@@ -50,4 +51,24 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+detekt {
+    // Detekt Configuration - See https://detekt.github.io/detekt/gradle.html#kotlin-dsl-3
+    input = files("src/main/kotlin", "src/test/kotlin")
+    debug = false
+    parallel = true
+    ignoreFailures = false
+    config.setFrom(files("$rootDir/project-config/convention/detekt-config.yml"))
+
+    reports {
+        xml {
+            enabled = false
+            destination = file("build/reports/detekt.xml")
+        }
+        html {
+            enabled = false
+            destination = file("build/reports/detekt.html")
+        }
+    }
 }
