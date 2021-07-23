@@ -1,10 +1,10 @@
-package com.tistory.devs0n.bingewatching
+package com.tistory.devs0n.bingewatching.domain.member
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class BingeWatchingApplicationTests {
+class MemberApplicationTests {
 
     @Test
     fun contextLoads() {
