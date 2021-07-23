@@ -7,5 +7,6 @@ import org.springframework.boot.runApplication
 class BingeWatchingApplication
 
 fun main(args: Array<String>) {
+    print("Hello")
     runApplication<BingeWatchingApplication>(*args)
 }
