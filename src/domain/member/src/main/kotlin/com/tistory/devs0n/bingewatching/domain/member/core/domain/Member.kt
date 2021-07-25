@@ -22,7 +22,7 @@ class Member : UUIDEntity {
             username.isBlank() ||
             username.hasLengthBetween(USERNAME_MIN_LENGTH, USERNAME_MAX_LENGTH)
         ) {
-            throw InvalidDomainValueException("Member.username")
+            throw InvalidDomainValueException("Member.username", username)
         }
     }
 
