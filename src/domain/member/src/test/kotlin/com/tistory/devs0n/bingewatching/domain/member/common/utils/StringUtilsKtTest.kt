@@ -21,4 +21,21 @@ internal class StringUtilsKtTest: DescribeSpec({
             }
         }
     }
+
+    describe("hasLengthBetween") {
+        describe("문자열이 입력 범위 내에 있으면") {
+            it("true를 리턴한다") {
+                assertThat("test".hasLengthBetween(4, 5)).isTrue
+                assertThat("test".hasLengthBetween(4, 5)).isTrue
+                assertThat("test".hasLengthBetween(3, 4)).isTrue
+            }
+        }
+
+        describe("문자열이 입력 범위 밖에 있으면") {
+            it("false를 리턴한다") {
+                assertThat("test".hasLengthBetween(5, 5)).isFalse
+                assertThat("test".hasLengthBetween(3, 3)).isFalse
+            }
+        }
+    }
 })
