@@ -20,7 +20,7 @@ class Member : UUIDEntity {
     private fun validateUsername(username: String) {
         if (username.hasSpace() ||
             username.isBlank() ||
-            username.hasLengthBetween(USERNAME_MIN_LENGTH, USERNAME_MAX_LENGTH)
+            !username.hasLengthBetween(USERNAME_MIN_LENGTH, USERNAME_MAX_LENGTH)
         ) {
             throw InvalidDomainValueException("Member.username", username)
         }
