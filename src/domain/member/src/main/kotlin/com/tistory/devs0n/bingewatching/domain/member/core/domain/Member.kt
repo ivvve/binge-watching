@@ -27,6 +27,8 @@ class Member : UUIDEntity {
     }
 
     companion object {
+        val ENTITY_NAME: String = Member::class.java.simpleName
+
         const val USERNAME_MAX_LENGTH = 20
         const val USERNAME_MIN_LENGTH = 4
 
