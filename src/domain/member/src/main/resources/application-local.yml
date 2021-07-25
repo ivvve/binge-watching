@@ -1,0 +1,14 @@
+logging:
+  level:
+    com.tistory.devs0n.bingewatching.domain.member: DEBUG
+    org.springframework.jdbc.core: TRACE
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/binge
+    username: root
+    password: root
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 10
+      connection-timeout: 10000 # 10 seconds
