@@ -27,6 +27,23 @@ subprojects {
         plugin("org.jetbrains.kotlin.plugin.spring")
         plugin("io.gitlab.arturbosch.detekt")
     }
+    
+    dependencies {
+        // Kotlin
+        implementation("org.jetbrains.kotlin:kotlin-reflect")
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+        // Spring
+        implementation("org.springframework.boot:spring-boot-starter")
+        annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+
+        // Dev
+        developmentOnly("org.springframework.boot:spring-boot-devtools")
+
+        // Testing
+        testImplementation("org.springframework.boot:spring-boot-starter-test")
+        testImplementation("io.kotest:kotest-runner-junit5:4.6.1")
+    }
 
     tasks.withType<KotlinCompile> {
         kotlinOptions {
@@ -44,23 +61,6 @@ configurations {
     compileOnly {
         extendsFrom(configurations.annotationProcessor.get())
     }
-}
-
-dependencies {
-    // Kotlin
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-
-    // Spring
-    implementation("org.springframework.boot:spring-boot-starter")
-    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
-
-    // Dev
-    developmentOnly("org.springframework.boot:spring-boot-devtools")
-
-    // Testing
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("io.kotest:kotest-runner-junit5:4.6.1")
 }
 
 detekt {

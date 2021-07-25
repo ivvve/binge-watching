@@ -7,7 +7,8 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.5.3/dbcb7b9aa82f98f4d079a2d3d7d1dc8a0dd171b1/spring-boot-configuration-processor-2.5.3.jar" />
         </processorPath>
-        <module name="binge-watching.main" />
+        <module name="binge-watching.domain.member.main" />
+        <module name="binge-watching.domain.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />
