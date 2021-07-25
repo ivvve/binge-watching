@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Import
 import org.springframework.data.jdbc.repository.config.EnableJdbcAuditing
 
 @SpringBootApplication(scanBasePackageClasses = [DomainMemberModule::class])
-@EnableJdbcAuditing
+@EnableJdbcAuditing // TODO Make `Domain Member Data JDBC Configuration`
 class DomainMemberModule
 
 @Target(AnnotationTarget.CLASS)

@@ -1,3 +1,4 @@
+# TODO Remove quote(") when using MySQL
 CREATE TABLE "members"
 (
     "id"         VARCHAR(36) PRIMARY KEY,
