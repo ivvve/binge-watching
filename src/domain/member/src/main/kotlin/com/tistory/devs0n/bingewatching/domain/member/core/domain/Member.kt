@@ -1,9 +1,9 @@
 package com.tistory.devs0n.bingewatching.domain.member.core.domain
 
 import com.tistory.devs0n.bingewatching.domain.member.common.entity.UUIDEntity
-import com.tistory.devs0n.bingewatching.domain.member.common.exceptions.InvalidDomainValueException
 import com.tistory.devs0n.bingewatching.domain.member.common.utils.hasLengthBetween
 import com.tistory.devs0n.bingewatching.domain.member.common.utils.hasSpace
+import com.tistory.devs0n.bingewatching.domain.member.core.domain.exceptions.MemberInvalidValueException
 import org.springframework.data.relational.core.mapping.Column
 import org.springframework.data.relational.core.mapping.Table
 
@@ -22,7 +22,7 @@ class Member : UUIDEntity {
             username.isBlank() ||
             !username.hasLengthBetween(USERNAME_MIN_LENGTH, USERNAME_MAX_LENGTH)
         ) {
-            throw InvalidDomainValueException("Member.username", username)
+            throw MemberInvalidValueException("username", username)
         }
     }
 
