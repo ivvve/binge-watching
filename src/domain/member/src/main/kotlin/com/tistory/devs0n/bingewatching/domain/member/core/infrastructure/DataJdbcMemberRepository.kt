@@ -6,27 +6,26 @@ import com.tistory.devs0n.bingewatching.domain.member.core.domain.exceptions.Mem
 import org.slf4j.LoggerFactory
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
-import java.util.*
 
 @Repository
 internal class DataJdbcMemberRepository(
-    private val repositoryRepository: InternalRepository
+    private val repository: InternalDataJdbcMemberRepository
 ) : MemberRepository {
     override fun save(member: Member): Member {
         return wrapMemberRepositoryException {
-            this.repositoryRepository.save(member)
+            this.repository.save(member)
         }
     }
 
-    override fun findById(id: UUID): Member? {
+    override fun findById(id: String): Member? {
         return wrapMemberRepositoryException {
-            this.repositoryRepository.findById(id).orElse(null)
+            this.repository.findById(id).orElse(null)
         }
     }
 
     override fun existsByUsername(username: String): Boolean {
         return wrapMemberRepositoryException {
-            this.repositoryRepository.existsByUsername(username)
+            this.repository.existsByUsername(username)
         }
     }
 
@@ -45,6 +44,6 @@ internal class DataJdbcMemberRepository(
     }
 }
 
-internal interface InternalRepository : CrudRepository<Member, UUID> {
+internal interface InternalDataJdbcMemberRepository : CrudRepository<Member, String> {
     fun existsByUsername(username: String): Boolean
 }

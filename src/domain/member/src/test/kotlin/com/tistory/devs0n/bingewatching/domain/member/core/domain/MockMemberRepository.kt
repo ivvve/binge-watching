@@ -1,9 +1,7 @@
 package com.tistory.devs0n.bingewatching.domain.member.core.domain
 
-import java.util.*
-
 class MockMemberRepository : MemberRepository {
-    private val members = mutableMapOf<UUID, Member>()
+    private val members = mutableMapOf<String, Member>()
 
     fun clear() {
         this.members.clear()
@@ -14,7 +12,7 @@ class MockMemberRepository : MemberRepository {
         return member
     }
 
-    override fun findById(id: UUID): Member? {
+    override fun findById(id: String): Member? {
         return this.members[id]
     }
 
