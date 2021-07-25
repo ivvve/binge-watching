@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 
 @DisplayName("JdbcMemberRepository")
-internal class DataJdbcMemberRepositoryTest : DataJdbcMemberTestInitializer() {
+internal class DataJdbcMemberRepositoryTest : MemberDataJdbcTestInitializer() {
     @Autowired
     lateinit var memberRepository: DataJdbcMemberRepository
 

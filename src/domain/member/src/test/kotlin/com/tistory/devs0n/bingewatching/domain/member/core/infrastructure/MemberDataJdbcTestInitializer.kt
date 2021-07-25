@@ -19,7 +19,7 @@ import javax.sql.DataSource
         ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = [DataJdbcMemberRepository::class])
     ]
 )
-class DataJdbcMemberTestInitializer {
+class MemberDataJdbcTestInitializer {
     @Autowired
     lateinit var memberDataSource: DataSource
 
