@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository
 import java.util.*
 
 @Repository
-internal class JdbcMemberRepository(
+internal class DataJdbcMemberRepository(
     private val repositoryRepository: InternalRepository
 ) : MemberRepository {
     override fun save(member: Member): Member {
