@@ -36,4 +36,20 @@ abstract class UUIDEntity : Persistable<UUID> {
     protected var new = false
     override fun getId() = this.id
     override fun isNew() = this.new
+
+    // for `equality`
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as UUIDEntity
+
+        if (id != other.id) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        return id.hashCode()
+    }
 }
