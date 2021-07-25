@@ -8,4 +8,6 @@ dependencies {
 
     implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
     runtimeOnly("mysql:mysql-connector-java")
+
+    testImplementation("com.h2database:h2")
 }
