@@ -27,7 +27,7 @@ subprojects {
         plugin("org.jetbrains.kotlin.plugin.spring")
         plugin("io.gitlab.arturbosch.detekt")
     }
-    
+
     dependencies {
         // Kotlin
         implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -81,4 +81,8 @@ detekt {
             destination = file("build/reports/detekt.html")
         }
     }
+}
+
+tasks.create("buildApiApplication") {
+    dependsOn(":application:api:build")
 }
