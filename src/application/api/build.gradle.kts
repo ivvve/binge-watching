@@ -8,7 +8,9 @@ val snippetsDir by extra { file("build/generated-snippets") }
 extra["testcontainersVersion"] = "1.15.3"
 
 dependencies {
+    // :domain:member
     implementation(project(":domain:member"))
+    implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
 
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
