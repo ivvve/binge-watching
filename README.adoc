@@ -1,4 +1,7 @@
 = Binge Watching
+
+image::https://github.com/ivvve/binge-watching/actions/workflows/check-before-merge.yml/badge.svg[]  
+
 :toc: left
 :toclevels: 3
 
