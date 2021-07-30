@@ -39,7 +39,7 @@ class MemberDataJdbcTestInitializer {
         }
 
         this.memberDataSource.connection.use {
-            ScriptUtils.executeSqlScript(it, ClassPathResource("migrations/V1.sql"))
+            ScriptUtils.executeSqlScript(it, ClassPathResource("migrations/V1_h2.sql"))
         }
         executed = true
         return true
