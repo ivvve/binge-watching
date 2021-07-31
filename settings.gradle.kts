@@ -1,6 +1,6 @@
 rootProject.name = "binge-watching"
 rootProject.children.forEach { project ->
-    project.buildFileName = "${project.name}.gradle.kts"
+    project.buildFileName = "build.gradle.kts"
 }
 
 // application modules
