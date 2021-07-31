@@ -8,7 +8,7 @@ import org.testcontainers.containers.MySQLContainer
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Transactional
-abstract class IntegrationTest {
+class IntegrationTest {
     companion object {
         private val mysqlContainer = MySQLContainer<Nothing>("mysql:8.0").apply {
             withCommand("mysqld", "--character-set-server=utf8mb4")
