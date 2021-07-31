@@ -10,6 +10,7 @@
         <module name="binge-watching.application.api.main" />
         <module name="binge-watching.domain.member.main" />
         <module name="binge-watching.application.main" />
+        <module name="binge-watching.domain.content.main" />
         <module name="binge-watching.domain.main" />
       </profile>
     </annotationProcessing>
