@@ -6,6 +6,7 @@ import org.springframework.test.context.DynamicPropertySource
 import org.springframework.transaction.annotation.Transactional
 import org.testcontainers.containers.MySQLContainer
 
+@Suppress("UtilityClassWithPublicConstructor") // ignore detekt rule
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Transactional
 class IntegrationTest {
