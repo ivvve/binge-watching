@@ -10,3 +10,6 @@ project(":application:api").projectDir = file("src/application/api")
 // domain modules
 include("domain:member")
 project(":domain:member").projectDir = file("src/domain/member")
+
+include("domain:content")
+project(":domain:content").projectDir = file("src/domain/content")
