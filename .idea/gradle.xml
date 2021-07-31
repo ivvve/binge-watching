@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/application" />
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/src/application/api" />
+            <option value="$PROJECT_DIR$/src/domain/content" />
             <option value="$PROJECT_DIR$/src/domain/member" />
           </set>
         </option>
